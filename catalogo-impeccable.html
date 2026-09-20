@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de 23 Comandos Impeccable — Vitor Igor</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .badge-cat {
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-family: 'Fira Code', monospace;
+        }
+        .cat-criar { background-color: rgba(59, 130, 246, 0.2); color: #60a5fa; border: 1px solid rgba(96, 165, 250, 0.4); }
+        .cat-avaliar { background-color: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.4); }
+        .cat-refinar { background-color: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.4); }
+        .cat-simplificar { background-color: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid rgba(248, 113, 113, 0.4); }
+        .cat-preparar { background-color: rgba(168, 85, 247, 0.2); color: #c084fc; border: 1px solid rgba(192, 132, 252, 0.4); }
+        .cat-sistematizar { background-color: rgba(20, 108, 255, 0.2); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); }
+        .cmd-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .cmd-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary-color);
+            box-shadow: 0 10px 30px rgba(20, 108, 255, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-dark-custom text-light">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark-navbar fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand font-fira fw-bold text-primary-custom fs-3" href="index.html">&lt;Programador/&gt;</a>
+            <button class="navbar-toggler border-primary-custom text-primary-custom" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link px-3" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="index.html#about">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 active text-primary-custom fw-semibold" href="catalogo-impeccable.html">Catálogo Impeccable</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="intervencoes-impeccable.html">Intervenções v2</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="index.html#contacts">Contatos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5 mt-5">
+        <div class="text-center my-4">
+            <span class="badge bg-primary-subtle text-primary-custom font-fira mb-2 px-3 py-2 border border-primary-custom rounded-pill">Impeccable Engine 2.0</span>
+            <h1 class="display-5 fw-bold font-poppins text-white">Catálogo Completo dos 23 Comandos</h1>
+            <p class="lead text-secondary-custom max-width-700 mx-auto">
+                Mapeamento detalhado dos 23 comandos da especificação oficial do <a href="https://impeccable.style/docs/" target="_blank" class="text-primary-custom">Impeccable</a>, categorizados e analisados segundo requisitos de finalidade, uso, riscos e evidência.
+            </p>
+        </div>
+
+        <div class="row g-4 mt-3">
+            <!-- 1. init -->
+            <div class="col-lg-6">
+                <div class="cmd-card p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <h3 class="h4 font-fira text-primary-custom mb-0">/impeccable init</h3>
+                        <span class="badge-cat cat-sistematizar">Sistematizar</span>
+                    </div>
+                    <p class="text-light"><strong>Nome Completo:</strong> Initialisation and Project Context Bootstrapping</p>
+                    <p class="text-secondary-custom small"><strong>Finalidade:</strong> Inicializar o contexto de design e produto do repositório criando os arquivos fundamentais de governança.</p>
+                    <p class="text-secondary-custom small"><strong>Momento de Uso:</strong> Na primeira interação com o repositório ou no início da fase de redesign.</p>
+                    <p class="text-secondary-custom small"><strong>Exemplo:</strong> Gerar o <code>PRODUCT.md</code> e o <code>DESIGN.md</code> no repositório do portfólio.</p>
+                    <p class="text-secondary-custom small"><strong>Riscos:</strong> Substituição acidental de documentações já existentes se executado sem backup.</p>
+                    <p class="text-secondary-custom small"><strong>Evidência:</strong> Arquivos de schema válidos criados na raiz do repositório.</p>
+                </div>
+            </div>
+
+            <!-- 2. document -->
+            <div class="col-lg-6">
+                <div class="cmd-card p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <h3 class="h4 font-fira text-primary-custom mb-0">/impeccable document</h3>
+                        <span class="badge-cat cat-sistematizar">Sistematizar</span>
+                    </div>
+                    <p class="text-light"><strong>Nome Completo:</strong> Design System & Component Documentation Sync</p>
+                    <p class="text-secondary-custom small"><strong>Finalidade:</strong> Atualizar a especificação do sistema de design à medida que novas telas e componentes evoluem.</p>
+                    <p class="text-secondary-custom small"><strong>Momento de Uso:</strong> Após alterações relevantes no CSS, novos tokens ou componentes criados.</p>
+                    <p class="text-secondary-custom small"><strong>Exemplo:</strong> Registrar a paleta <code>#146CFF</code> e tipografia Poppins no <code>DESIGN.md</code>.</p>
+                    <p class="text-secondary-custom small"><strong>Riscos:</strong> Documentação tornar-se prolixa e desconectada da implementação real.</p>
+                    <p class="text-secondary-custom small"><strong>Evidência:</strong> <code>DESIGN.md</code> reflete exatamente todas as variáveis CSS ativas.</p>
+                </div>
+            </div>
+
+            <!-- 3. shape -->
+            <div class="col-lg-6">
+                <div class="cmd-card p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <h3 class="h4 font-fira text-primary-custom mb-0">/impeccable shape</h3>
+                        <span class="badge-cat cat-criar">Criar</span>
+                    </div>
+                    <p class="text-light"><strong>Nome Completo:</strong> Component & Layout Structure Shaping</p>
+                    <p class="text-secondary-custom small"><strong>Finalidade:</strong> Definir a arquitetura visual e a hierarquia dos blocos de uma nova seção antes do código final.</p>
+                    <p class="text-secondary-custom small"><strong>Momento de Uso:</strong> Na criação de novos módulos ou reestruturação de seções confusas.</p>
+                    <p class="text-secondary-custom small"><strong>Exemplo:</strong> Moldar a seção "Sobre mim" em formato de card IDE de código.</p>
+                    <p class="text-secondary-custom small"><strong>Riscos:</strong> Adicionar estruturas rígidas demais que quebrem a responsividade em telas pequenas.</p>
+                    <p class="text-secondary-custom small"><strong>Evidência:</strong> Layout estruturado com containers semânticos e hierarquia clara.</p>
+                </div>
+            </div>
+
+            <!-- 4. critique -->
+            <div class="col-lg-6">
+                <div class="cmd-card p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <h3 class="h4 font-fira text-primary-custom mb-0">/impeccable critique</h3>
+                        <span class="badge-cat cat-avaliar">Avaliar</span>
+                    </div>
+                    <p class="text-light"><strong>Nome Completo:</strong> Design Heuristics & UX Critique Analysis</p>
+                    <p class="text-secondary-custom small"><strong>Finalidade:</strong> Fazer uma avaliação crítica de usabilidade, hierarquia e princípios visuais da página.</p>
+                    <p class="text-secondary-custom small"><strong>Momento de Uso:</strong> Antes de liberar modificações ou na fase de diagnostico inicial da v1.</p>
+                    <p class="text-secondary-custom small"><strong>Exemplo:</strong> Identificar que os botões de contato tinham pouco contraste na versão original.</p>
+                    <p class="text-secondary-custom small"><strong>Riscos:</strong> Críticas excessivamente subjetivas sem foco em dados práticos de UX.</p>
+                    <p class="text-secondary-custom small"><strong>Evidência:</strong> Lista clara de pontos fracos e recomendações objetivas de melhoria.</p>
+                </div>
+            </div>
+
+            <!-- 5. audit -->
+            <div class="col-lg-6">
+                <div class="cmd-card p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <h3 class="h4 font-fira text-primary-custom mb-0">/impeccable audit</h3>
+                        <span class="badge-cat cat-avaliar">Avaliar</span>
+                    </div>
+                    <p class="text-light"><strong>Nome Completo:</strong> Technical & Visual Consistency Audit</p>
+                    <p class="text-secondary-custom small"><strong>Finalidade:</strong> Auditar o código HTML/CSS buscando quebras de padrões, CSS inline ou inconsistências.</p>
+                    <p class="text-secondary-custom small"><strong>Momento de Uso:</strong> Na revisão de qualidade técnica antes do commit final.</p>
+                    <p class="text-secondary-custom small"><strong>Exemplo:</strong> Varrer o <code>styles.css</code> para eliminar regras duplicadas ou cores fora da marca.</p>
+                    <p class="text-secondary-custom small"><strong>Riscos:</strong> Gerar alertas falsos em hacks intencionais para navegadores legados.</p>
+                    <p class="text-secondary-custom small"><strong>Evidência:</strong> Relatório de zero violações dos padrões descritos no <code>DESIGN.md</code>.</p>
+                </div>
+            </div>
+
+            <!-- 6. typography -->
+            <div class="col-lg-6">
+                <div class="cmd-card p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <h3 class="h4 font-fira text-primary-custom mb-0">/impeccable typography</h3>
+                        <span class="badge-cat cat-refinar">Refinar</span>
+                    </div>
+                    <p class="text-light"><strong>Nome Completo:</strong> Typographic Scale & Font Hierarchy Refinement</p>
+                    <p class="text-secondary-custom small"><strong>Finalidade:</strong> Ajustar escala tipográfica, line-height, font-weight e alinhamento de texto.</p>
+                    <p class="text-secondary-custom small"><strong>Momento de Uso:</strong> Quando os textos parecem desproporcionais ou difíceis de ler.</p>
+                    <p class="text-secondary-custom small"><strong>Exemplo:</strong> Padronizar `Poppins` para títulos e `Fira Code` para termos de desenvolvedor.</p>
+                    <p class="text-secondary-custom small"><strong>Riscos:</strong> Misturar fontes demais e prejudicar a legibilidade da página.</p>
+                    <p class="text-secondary-custom small"><strong>Evidência:</strong> Ritmo vertical perfeito e relação harmoniosa entre H1, H2, body e labels.</p>
+                </div>
+            </div>
+
+            <!-- 7. layout -->
+            <div class="col-lg-6">
+                <div class="cmd-card p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <h3 class="h4 font-fira text-primary-custom mb-0">/impeccable layout</h3>
+                        <span class="badge-cat cat-refinar">Refinar</span>
+                    </div>
+                    <p class="text-light"><strong>Nome Completo:</strong> Grid Alignment & Spatial Spacing Optimization</p>
+                    <p class="text-secondary-custom small"><strong>Finalidade:</strong> Corrigir alinhamentos de grid, espaçamentos internos (padding) e externos (margin).</p>
+                    <p class="text-secondary-custom small"><strong>Momento de Uso:</strong> Quando componentes parecem espremidos ou desalinhados visualmente.</p>
+                    <p class="text-secondary-custom small"><strong>Exemplo:</strong> Ajustar o container dos cards de contato para centralização precisa em telas grandes.</p>
+                    <p class="text-secondary-custom small"><strong>Riscos:</strong> Quebrar o alinhamento em resoluções intermediárias de tablet.</p>
+                    <p class="text-secondary-custom small"><strong>Evidência:</strong> Alinhamento milimétrico em grid de 12 colunas com respiro adequado.</p>
+                </div>
+            </div>
+
+            <!-- 8. color -->
+            <div class="col-lg-6">
+                <div class="cmd-card p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <h3 class="h4 font-fira text-primary-custom mb-0">/impeccable color</h3>
+                        <span class="badge-cat cat-refinar">Refinar</span>
+                    </div>
+                    <p class="text-light"><strong>Nome Completo:</strong> Color Palette & Contrast Calibration</p>
+                    <p class="text-secondary-custom small"><strong>Finalidade:</strong> Calibrar uso de cores, garantindo harmonia visual e contraste para leitura.</p>
+                    <p class="text-secondary-custom small"><strong>Momento de Uso:</strong> Na definição de paletas escuras, destaques ou botões de ação.</p>
+                    <p class="text-secondary-custom small"><strong>Exemplo:</strong> Aplicar a cor primária `#146CFF` com variações de opacidade para brilhos e bordas.</p>
+                    <p class="text-secondary-custom small"><strong>Riscos:</strong> Uso excessivo da cor de destaque causando poluição e fadiga visual.</p>
+                    <p class="text-secondary-custom small"><strong>Evidência:</strong> Taxa de contraste atinge no mínimo 4.5:1 (padrão WCAG AA).</p>
+                </div>
+            </div>
+
+            <!-- 9. responsiveness -->
+            <div class="col-lg-6">
+                <div class="cmd-card p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <h3 class="h4 font-fira text-primary-custom mb-0">/impeccable responsiveness</h3>
+                        <span class="badge-cat cat-refinar">Refinar</span>
+                    </div>
+                    <p class="text-light"><strong>Nome Completo:</strong> Multi-Device & Mobile Viewport Adaptation</p>
+                    <p class="text-secondary-custom small"><strong>Finalidade:</strong> Garantir excelente navegação e disposição gráfica em qualquer tamanho de tela.</p>
+                    <p class="text-secondary-custom small"><strong>Momento de Uso:</strong> Na homologação de telas em smartphones, tablets e monitores ultra-wide.</p>
+                    <p class="text-secondary-custom small"><strong>Exemplo:</strong> Reorganizar a Hero section de 2 colunas para empilhamento vertical no mobile.</p>
+                    <p class="text-secondary-custom small"><strong>Riscos:</strong> Esconder elementos cruciais da interface em telas pequenas.</p>
+                    <p class="text-secondary-custom small"><strong>Evidência:</strong> Ausência total de rolagem horizontal indesejada em todas as resoluções.</p>
+                </div>
+            </div>
+
+            <!-- 10. dark-mode -->
+            <div class="col-lg-6">
+                <div class="cmd-card p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <h3 class="h4 font-fira text-primary-custom mb-0">/impeccable dark-mode</h3>
+                        <span class="badge-cat cat-refinar">Refinar</span>
+                    </div>
+                    <p class="text-light"><strong>Nome Completo:</strong> Dark Theme Contrast & Visual Comfort Tuning</p>
+                    <p class="text-secondary-custom small"><strong>Finalidade:</strong> Ajustar o esquema de cores escuras para evitar sombras duras e cores puras estouradas.</p>
+                    <p class="text-secondary-custom small"><strong>Momento de Uso:</strong> Em aplicações com tema dark padrão ou alternável.</p>
+                    <p class="text-secondary-custom small"><strong>Exemplo:</strong> Substituir o preto puro `#000000` pelo tom space-dark `#090a0f` com superfície `#11131c`.</p>
+                    <p class="text-secondary-custom small"><strong>Riscos:</strong> Deixar o fundo muito claro tirando a sensação de tema escuro premium.</p>
+                    <p class="text-secondary-custom small"><strong>Evidência:</strong> Leitura confortável mesmo em ambientes escuros sem ofuscamento.</p>
+                </div>
+            </div>
+
+            <!-- 11. states -->
+            <div class="col-lg-6">
+                <div class="cmd-card p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <h3 class="h4 font-fira text-primary-custom mb-0">/impeccable states</h3>
+                        <span class="badge-cat cat-refinar">Refinar</span>
+                    </div>
+                    <p class="text-light"><strong>Nome Completo:</strong> Interactive Element & Component State Design</p>
+                    <p class="text-secondary-custom small"><strong>Finalidade:</strong> Definir estados visuais claros (default, hover, active, focus, disabled) nos elementos.</p>
+                    <p class="text-secondary-custom small"><strong>Momento de Uso:</strong> Na criação ou estilização de botões, links e formulários.</p>
+                    <p class="text-secondary-custom small"><strong>Exemplo:</strong> Adicionar animação de elevação (`translateY(-8px)`) e brilho azul no hover dos cards.</p>
+                    <p class="text-secondary-custom small"><strong>Riscos:</strong> Animações lentas demais que passam a sensação de travamento na interface.</p>
+                    <p class="text-secondary-custom small"><strong>Evidência:</strong> O usuário recebe feedback tátil e visual imediato a cada clique ou passagem do mouse.</p>
+                </div>
+            </div>
+
+            <!-- 12. microcopy -->
+            <div class="col-lg-6">
+                <div class="cmd-card p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <h3 class="h4 font-fira text-primary-custom mb-0">/impeccable microcopy</h3>
+                        <span class="badge-cat cat-refinar">Refinar</span>
+                    </div>
+                    <p class="text-light"><strong>Nome Completo:</strong> UI Text & Microcopy Polish</p>
+                    <p class="text-secondary-custom small"><strong>Finalidade:</strong> Refinar pequenos textos de interface (botões, badges, placeholders, labels) para serem diretos.</p>
+                    <p class="text-secondary-custom small"><strong>Momento de Uso:</strong> Na revisão de tom de voz e clareza da comunicação do site.</p>
+                    <p class="text-secondary-custom small"><strong>Exemplo:</strong> Alterar o botão da Hero de "Saiba Mais" para "Sobre mim" com o indicador `#` em Fira Code.</p>
+                    <p class="text-secondary-custom small"><strong>Riscos:</strong> Usar gírias ou termos ambíguos que recrutadores não compreendam.</p>
+                    <p class="text-secondary-custom small"><strong>Evidência:</strong> Leitura rápida sem dúvida sobre a ação de cada botão.</p>
+                </div>
+            </div>
+
+            <!-- 13. simplify -->
+            <div class="col-lg-6">
+                <div class="cmd-card p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <h3 class="h4 font-fira text-primary-custom mb-0">/impeccable simplify</h3>
+                        <span class="badge-cat cat-simplificar">Simplificar</span>
+                    </div>
+                    <p class="text-light"><strong>Nome Completo:</strong> Visual Complexity Reduction & Rationalization</p>
+                    <p class="text-secondary-custom small"><strong>Finalidade:</strong> Reduzir excessos visuais, removendo bordas, sombras ou decorações desnecessárias.</p>
+                    <p class="text-secondary-custom small"><strong>Momento de Uso:</strong> Quando a tela parece sobrecarregada ou com ruído estético.</p>
+                    <p class="text-secondary-custom small"><strong>Exemplo:</strong> Remover múltiplos fundos coloridos e unificar as seções em poucas variações escuras.</p>
+                    <p class="text-secondary-custom small"><strong>Riscos:</strong> Deixar a interface sem graça, apagada ou genérica demais.</p>
+                    <p class="text-secondary-custom small"><strong>Evidência:</strong> Foco do usuário vai direto para o conteúdo e foto de perfil.</p>
+                </div>
+            </div>
+
+            <!-- 14. declutter -->
+            <div class="col-lg-6">
+                <div class="cmd-card p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <h3 class="h4 font-fira text-primary-custom mb-0">/impeccable declutter</h3>
+                        <span class="badge-cat cat-simplificar">Simplificar</span>
+                    </div>
+                    <p class="text-light"><strong>Nome Completo:</strong> Interface Noise Removal & Minimalist Cleanup</p>
+                    <p class="text-secondary-custom small"><strong>Finalidade:</strong> Eliminar elementos redundantes, ícones sem função e linhas divisórias pesadas.</p>
+                    <p class="text-secondary-custom small"><strong>Momento de Uso:</strong> Na limpeza final das páginas antes do fechamento do layout.</p>
+                    <p class="text-secondary-custom small"><strong>Exemplo:</strong> Remover efeitos Matrix concorrentes e manter o efeito Canvas sutil ao fundo.</p>
+                    <p class="text-secondary-custom small"><strong>Riscos:</strong> Remover informações essenciais para a compreensão do usuário.</p>
+                    <p class="text-secondary-custom small"><strong>Evidência:</strong> Interface limpa com hierarquia visual nítida.</p>
+                </div>
+            </div>
+
+            <!-- 15. flatten -->
+            <div class="col-lg-6">
+                <div class="cmd-card p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <h3 class="h4 font-fira text-primary-custom mb-0">/impeccable flatten</h3>
+                        <span class="badge-cat cat-simplificar">Simplificar</span>
+                    </div>
+                    <p class="text-light"><strong>Nome Completo:</strong> DOM & Layout Layer Flattening</p>
+                    <p class="text-secondary-custom small"><strong>Finalidade:</strong> Achatar aninhamentos excessivos de divs e containers no código HTML.</p>
+                    <p class="text-secondary-custom small"><strong>Momento de Uso:</strong> Na otimização da estrutura de marcação para melhorar a renderização.</p>
+                    <p class="text-secondary-custom small"><strong>Exemplo:</strong> Eliminar divs container aninhadas desnecessárias na seção de contatos.</p>
+                    <p class="text-secondary-custom small"><strong>Riscos:</strong> Quebrar o comportamento de flexbox ou grid se uma div pai relevante for removida.</p>
+                    <p class="text-secondary-custom small"><strong>Evidência:</strong> Árvore DOM mais rasa e código HTML limpo.</p>
+                </div>
+            </div>
+
+            <!-- 16. a11y -->
+            <div class="col-lg-6">
+                <div class="cmd-card p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <h3 class="h4 font-fira text-primary-custom mb-0">/impeccable a11y</h3>
+                        <span class="badge-cat cat-preparar">Preparar</span>
+                    </div>
+                    <p class="text-light"><strong>Nome Completo:</strong> Accessibility Audit & WCAG Compliance</p>
+                    <p class="text-secondary-custom small"><strong>Finalidade:</strong> Garantir acessibilidade com ARIA labels, alt text, navegação por teclado e contraste.</p>
+                    <p class="text-secondary-custom small"><strong>Momento de Uso:</strong> Na validação de inclusão e usabilidade técnica.</p>
+                    <p class="text-secondary-custom small"><strong>Exemplo:</strong> Adicionar `alt="Vitor - Foto de Perfil"` e garantir foco visível em todos os links com Tab.</p>
+                    <p class="text-secondary-custom small"><strong>Riscos:</strong> Adicionar atributos ARIA incorretos que confundam leitores de tela.</p>
+                    <p class="text-secondary-custom small"><strong>Evidência:</strong> Pontuação 100 no Lighthouse no quesito Acessibilidade.</p>
+                </div>
+            </div>
+
+            <!-- 17. perf -->
+            <div class="col-lg-6">
+                <div class="cmd-card p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <h3 class="h4 font-fira text-primary-custom mb-0">/impeccable perf</h3>
+                        <span class="badge-cat cat-preparar">Preparar</span>
+                    </div>
+                    <p class="text-light"><strong>Nome Completo:</strong> Performance & Asset Loading Optimization</p>
+                    <p class="text-secondary-custom small"><strong>Finalidade:</strong> Otimizar tempo de carregamento, tamanho de imagens e eficiência do Canvas/JS.</p>
+                    <p class="text-secondary-custom small"><strong>Momento de Uso:</strong> Antes do deploy para garantir carregamento instantâneo.</p>
+                    <p class="text-secondary-custom small"><strong>Exemplo:</strong> Otimizar o loop de animação do Matrix Canvas usando `requestAnimationFrame` eficiente.</p>
+                    <p class="text-secondary-custom small"><strong>Riscos:</strong> Reduzir demais a qualidade de imagens até ficarem pixeladas.</p>
+                    <p class="text-secondary-custom small"><strong>Evidência:</strong> Carregamento da página em menos de 1 segundo em conexões 4G.</p>
+                </div>
+            </div>
+
+            <!-- 18. i18n -->
+            <div class="col-lg-6">
+                <div class="cmd-card p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <h3 class="h4 font-fira text-primary-custom mb-0">/impeccable i18n</h3>
+                        <span class="badge-cat cat-preparar">Preparar</span>
+                    </div>
+                    <p class="text-light"><strong>Nome Completo:</strong> Internationalization & Multi-Language Readiness</p>
+                    <p class="text-secondary-custom small"><strong>Finalidade:</strong> Estruturar o sistema para suporte fluido a múltiplos idiomas sem quebrar o layout.</p>
+                    <p class="text-secondary-custom small"><strong>Momento de Uso:</strong> Na implementação do seletor de idiomas (Português/Inglês).</p>
+                    <p class="text-secondary-custom small"><strong>Exemplo:</strong> Mapear todas as strings no objeto `translations` no `script.js` utilizando `data-i18n`.</p>
+                    <p class="text-secondary-custom small"><strong>Riscos:</strong> Textos em inglês estourarem a largura de containers projetados apenas para português.</p>
+                    <p class="text-secondary-custom small"><strong>Evidência:</strong> Troca instantânea de idioma em 100% da interface sem recarregar a página.</p>
+                </div>
+            </div>
+
+            <!-- 19. tokens -->
+            <div class="col-lg-6">
+                <div class="cmd-card p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <h3 class="h4 font-fira text-primary-custom mb-0">/impeccable tokens</h3>
+                        <span class="badge-cat cat-preparar">Preparar</span>
+                    </div>
+                    <p class="text-light"><strong>Nome Completo:</strong> Design Tokens & CSS Variables Management</p>
+                    <p class="text-secondary-custom small"><strong>Finalidade:</strong> Centralizar variáveis de cor, fontes, espaçamentos e sombras no CSS.</p>
+                    <p class="text-secondary-custom small"><strong>Momento de Uso:</strong> No início da estilização e na manutenção contínua do tema.</p>
+                    <p class="text-secondary-custom small"><strong>Exemplo:</strong> Criar `:root { --primary-color: #146CFF; --bg-dark: #090a0f; }` no `styles.css`.</p>
+                    <p class="text-secondary-custom small"><strong>Riscos:</strong> Criar tokens genéricos demais com nomes confusos.</p>
+                    <p class="text-secondary-custom small"><strong>Evidência:</strong> Alterar uma única variável no `:root` atualiza todo o site harmoniosamente.</p>
+                </div>
+            </div>
+
+            <!-- 20. build -->
+            <div class="col-lg-6">
+                <div class="cmd-card p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <h3 class="h4 font-fira text-primary-custom mb-0">/impeccable build</h3>
+                        <span class="badge-cat cat-preparar">Preparar</span>
+                    </div>
+                    <p class="text-light"><strong>Nome Completo:</strong> Production Readiness & Build Verification</p>
+                    <p class="text-secondary-custom small"><strong>Finalidade:</strong> Verificar se todos os arquivos estáticos, links de CDN e scripts estão sem erros de console.</p>
+                    <p class="text-secondary-custom small"><strong>Momento de Uso:</strong> Imediatamente antes de subir as alterações para produção (GitHub Pages / Vercel).</p>
+                    <p class="text-secondary-custom small"><strong>Exemplo:</strong> Checar se os CDNs do Bootstrap 5 e Devicon estão carregando via HTTPS sem falha.</p>
+                    <p class="text-secondary-custom small"><strong>Riscos:</strong> Deploy de arquivos com caminhos de imagem locais quebrados.</p>
+                    <p class="text-secondary-custom small"><strong>Evidência:</strong> Zero erros no Console do Desenvolvedor (F12).</p>
+                </div>
+            </div>
+
+            <!-- 21. polish -->
+            <div class="col-lg-6">
+                <div class="cmd-card p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <h3 class="h4 font-fira text-primary-custom mb-0">/impeccable polish</h3>
+                        <span class="badge-cat cat-refinar">Refinar</span>
+                    </div>
+                    <p class="text-light"><strong>Nome Completo:</strong> Final Visual & Interaction Micro-Polish</p>
+                    <p class="text-secondary-custom small"><strong>Finalidade:</strong> Fazer o polimento final das sombras, cantos arredondados, bordas sutis e transições.</p>
+                    <p class="text-secondary-custom small"><strong>Momento de Uso:</strong> Na reta final de acabamento do projeto.</p>
+                    <p class="text-secondary-custom small"><strong>Exemplo:</strong> Adicionar borda brilhante suave no card da seção de contatos e transição cubic-bezier.</p>
+                    <p class="text-secondary-custom small"><strong>Riscos:</strong> Gastar tempo excessivo com detalhes imperceptíveis.</p>
+                    <p class="text-secondary-custom small"><strong>Evidência:</strong> Sensação de interface de produto profissional de nível comercial.</p>
+                </div>
+            </div>
+
+            <!-- 22. live -->
+            <div class="col-lg-6">
+                <div class="cmd-card p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <h3 class="h4 font-fira text-primary-custom mb-0">/impeccable live</h3>
+                        <span class="badge-cat cat-avaliar">Avaliar</span>
+                    </div>
+                    <p class="text-light"><strong>Nome Completo:</strong> Live Viewport & Browser Runtime Validation</p>
+                    <p class="text-secondary-custom small"><strong>Finalidade:</strong> Validar o funcionamento em tempo real da aplicação rodando diretamente em navegadores reais.</p>
+                    <p class="text-secondary-custom small"><strong>Momento de Uso:</strong> Após realizar mudanças no código para conferir o resultado em tela.</p>
+                    <p class="text-secondary-custom small"><strong>Exemplo:</strong> Testar a animação do Canvas Matrix no Chrome, Edge e Firefox.</p>
+                    <p class="text-secondary-custom small"><strong>Riscos:</strong> Confiar apenas em emuladores e ignorar bugs específicos do Safari/iOS.</p>
+                    <p class="text-secondary-custom small"><strong>Evidência:</strong> Interface funciona perfeitamente sem engasgos nos principais navegadores.</p>
+                </div>
+            </div>
+
+            <!-- 23. extract -->
+            <div class="col-lg-6">
+                <div class="cmd-card p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <h3 class="h4 font-fira text-primary-custom mb-0">/impeccable extract</h3>
+                        <span class="badge-cat cat-sistematizar">Sistematizar</span>
+                    </div>
+                    <p class="text-light"><strong>Nome Completo:</strong> Reusable Component & Pattern Extraction</p>
+                    <p class="text-secondary-custom small"><strong>Finalidade:</strong> Extrair padrões reutilizáveis (como classes CSS utilitárias) para reaproveitamento limpo.</p>
+                    <p class="text-secondary-custom small"><strong>Momento de Uso:</strong> Quando o mesmo estilo começa a ser duplicado em vários arquivos HTML.</p>
+                    <p class="text-secondary-custom small"><strong>Exemplo:</strong> Extrair as classes `.contact-item` e `.tech-chip` no `styles.css`.</p>
+                    <p class="text-secondary-custom small"><strong>Riscos:</strong> Abstrair componentes cedo demais gerando código CSS rígido.</p>
+                    <p class="text-secondary-custom small"><strong>Evidência:</strong> Redução substancial de código duplicado e facilidade de manutenção.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-4 text-center bg-dark-navbar text-secondary-custom font-fira border-top border-secondary border-opacity-25 mt-5">
+        <div class="container">
+            <p class="mb-0">© 2026 Vitor Igor dos Santos. Catálogo de 23 Comandos Impeccable.</p>
+            <p class="mb-0 mt-1 small opacity-75"><a href="index.html" class="text-primary-custom">Voltar ao Portfólio Main (v2)</a></p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

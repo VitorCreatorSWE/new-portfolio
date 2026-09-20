@@ -3,7 +3,7 @@
 ![Role: Full Stack Developer](https://img.shields.io/badge/Role-Full%20Stack%20Developer-00f2fe?style=for-the-badge)
 ![Education: IFSP Guarulhos](https://img.shields.io/badge/Education-IFSP%20Guarulhos-4caf50?style=for-the-badge)
 ![GU: GU3080838](https://img.shields.io/badge/GU-GU3080838-blue?style=for-the-badge)
-![Impeccable Design System](https://img.shields.io/badge/Design-Impeccable-146CFF?style=for-the-badge)
+![Impeccable Engine: v2.0](https://img.shields.io/badge/Impeccable-v2.0%20(Release)-146CFF?style=for-the-badge)
 
 ---
 
@@ -13,61 +13,48 @@
 * **GU:** GU3080838
 * **Instituição:** Instituto Federal de Educação, Ciência e Tecnologia de São Paulo (IFSP — Câmpus Guarulhos)
 * **Curso:** Análise e Desenvolvimento de Sistemas (ADS)
-* **Trabalho:** Planejamento, Implementação e Reposição com Sistema de Design Impeccable
+* **Trabalho:** Reposição e Redesign com o Framework **Impeccable** (Versão v1 → v2)
 
 ---
 
-## 📖 Descrição do Projeto
+## 📌 Links Rápidos das Páginas do Portfólio (v2)
 
-Este repositório contém o meu **Portfólio Pessoal**, desenvolvido como trabalho da disciplina no IFSP Guarulhos. O projeto é uma *Single Page Application* (SPA) estática, responsiva e bilingue (Português e Inglês). Nele, apresento minha formação no curso de Análise e Desenvolvimento de Sistemas, minhas competências em desenvolvimento web (HTML, CSS, JavaScript e Python) e disponibilizo meus links de contato para o WhatsApp e GitHub.
-
----
-
-## 🎯 Sistema Impeccable & Objetivos de Reposição
-
-O projeto foi estruturado seguindo o framework de design e qualidade de interface **Impeccable**, atendendo aos seguintes objetivos técnicos e conceituais:
-
-1. **Instalação e Configuração do Impeccable:** Estruturação dos arquivos centrais [`PRODUCT.md`](PRODUCT.md) e [`DESIGN.md`](DESIGN.md).
-2. **Contexto de Produto (`PRODUCT.md`):** Definição clara do público-alvo (recrutadores brasileiros e internacionais), tom de voz (*Ambitious & Sharp*), critérios de sucesso e proibições rígidas (*anti-references*).
-3. **Sistema Visual (`DESIGN.md`):** Padronização rigorosa de cores (Brand Blue `#146CFF`, backgrounds escuros `#090a0f`/`#11131c`), tipografia (`Poppins` e `Fira Code`), hierarquia, regras de acessibilidade e estados da interface.
-4. **Comandos e Auditoria de Interface (23 Comandos Impeccable):**
-   - **Tipografia & Conteúdo:** Controle de legibilidade, remoção de redundâncias e hierarquia visual clara.
-   - **Layout & Responsividade:** Adaptação perfeita para mobile, tablet e desktop com grid Bootstrap 5.
-   - **Cor & Estados:** Uso exclusivo da cor de marca para foco, hover e elementos interativos.
-   - **Acessibilidade:** Contrastes em conformidade WCAG AA, tags `alt` semânticas e navegabilidade por teclado.
-   - **Avaliação Estética, Auditoria Técnica e Refinamento Visual:** Identificação e solução de inconsistências técnicas e visuais antes da aprovação do código.
-5. **Decisões Justificadas:** Rejeição de sugestões genéricas de IA (como gradientes roxos genéricos ou fontes não padronizadas), garantindo alinhamento com a identidade do produto.
+- 🏠 **[Página Principal do Portfólio (index.html)](index.html)** — Portfólio v2.0 otimizado com estética IDE e efeito Matrix.
+- 📚 **[Catálogo dos 23 Comandos Impeccable (catalogo-impeccable.html)](catalogo-impeccable.html)** — Catálogo obrigatório dos 23 comandos com os 7 campos analíticos de cada um.
+- 🛠️ **[Registro de Intervenções Aplicadas (intervencoes-impeccable.html)](intervencoes-impeccable.html)** — Registro detalhado das 16 intervenções práticas realizadas na transição da `v1` para a `v2`.
 
 ---
 
-## ✨ Funcionalidades do Portfólio
+## 🏷️ Tags Git de Versão (`v1` e `v2`)
 
-- **🌐 Troca de Idioma (i18n):** Alternância instantânea entre **Português (PT)** e **Inglês (EN)** sem recarregar a página.
-- **🎨 Design Escuro & Responsivo:** Layout adaptável para celular, tablet e computador com sistema de componentes estilo IDE.
-- **🌧️ Animação Matrix (Canvas):** Fundo animado na tela inicial com chuva de código binário em azul.
-- **⚡ Efeitos nos Contatos:** Animações interativas ao passar o mouse sobre os botões do WhatsApp (Matrix verde) e GitHub (chuva de ícones).
-- **📞 Contatos Diretos:** Links diretos para WhatsApp e perfil do GitHub.
+Em conformidade com as orientações do trabalho, as versões do repositório estão formalmente preservadas:
 
----
-
-## 🛠️ Tecnologias Utilizadas
-
-- **HTML5:** Estrutura semântica da página.
-- **CSS3 / Bootstrap 5:** Estilização e responsividade.
-- **JavaScript (ES6+):** Troca de idioma e animação em Canvas.
-- **Google Fonts:** Fontes Poppins e Fira Code.
-- **Bootstrap Icons & Devicon:** Ícones da interface e das tecnologias.
+- 🔖 **`v1` (Tag Git):** Aponta para o primeiro commit do portfólio original pré-intervenções Impeccable.
+  - Para alternar para a v1: `git checkout v1`
+- 🔖 **`v2` (Tag Git & Branch `main`):** Representa a versão final com todas as melhorias visuais, técnicas, o catálogo dos 23 comandos e a página de intervenções integradas.
+  - Para alternar para a v2: `git checkout v2`
 
 ---
 
-## 🚀 Como Executar o Projeto
+## 🎯 Atendimento às Exigências da Atividade Impeccable
 
-1. Baixe ou clone o repositório:
-   ```bash
-   git clone https://github.com/VitorCreatorSWE/new-portfolio.git
-   ```
-2. Dê dois cliques no arquivo `index.html` para abrir diretamente em qualquer navegador (Chrome, Edge, Firefox, Brave).
-3. Se estiver usando o VS Code, você também pode abrir com a extensão **Live Server**.
+### 1. Governança e Especificação de Produto
+- **[`PRODUCT.md`](PRODUCT.md):** Define contexto de marca, personas (recrutadores BR e internacionais), tom de voz e anti-referências.
+- **[`DESIGN.md`](DESIGN.md):** Define o sistema visual, variáveis de cor (`#146CFF`, `#090a0f`), tipografia (`Poppins`, `Fira Code`), estados de componente e acessibilidade.
+
+### 2. Catálogo dos 23 Comandos ([`catalogo-impeccable.html`](catalogo-impeccable.html))
+Apresenta os 23 comandos oficiais categorizados (*Criar, Avaliar, Refinar, Simplificar, Preparar, Sistematizar*) contendo:
+- *Nome completo, Categoria, Finalidade, Momento de uso, Exemplo, Riscos e Evidência de melhoria*.
+
+### 3. Aplicação Mínima Garantida (16 Comandos Práticos)
+Documentados na página **[`intervencoes-impeccable.html`](intervencoes-impeccable.html)**:
+1. `init` & `document` (Sistematização de contexto)
+2. `shape` (Reestruturação da seção Sobre para estilo IDE)
+3. `critique` & `audit` (Avaliação heurística e limpeza de CSS)
+4. `typography`, `layout`, `color`, `responsiveness`, `dark-mode`, `states`, `microcopy`, `polish` (Refinamento visual completo)
+5. `simplify` (Simplificação de ruídos visuais e navegação)
+6. `a11y`, `perf`, `i18n` (Preparação para produção, acessibilidade e idioma PT/EN)
+7. `live` (Homologação em tempo real no navegador)
 
 ---
 
@@ -76,15 +63,15 @@ O projeto foi estruturado seguindo o framework de design e qualidade de interfac
 ```text
 new-portfolio/
 ├── assets/
-│   └── profile.png          # Foto de perfil
-├── docs/
-│   └── documentacao.md      # Documentação do trabalho
-├── DESIGN.md                # Guia do sistema visual (Impeccable)
-├── PRODUCT.md               # Definição do produto e público (Impeccable)
-├── index.html               # Código HTML da página
-├── styles.css               # Folha de estilos CSS
-├── script.js               # Código JavaScript
-└── README.md                # Documentação e apresentação do repositório
+│   └── profile.png               # Foto de perfil
+├── catalogo-impeccable.html      # Página do catálogo dos 23 comandos
+├── intervencoes-impeccable.html  # Página do registro de 16 intervenções práticas
+├── DESIGN.md                     # Guia do sistema visual (Impeccable)
+├── PRODUCT.md                    # Definição do produto e público (Impeccable)
+├── index.html                    # Página principal do portfólio v2
+├── styles.css                    # Folha de estilos CSS otimizada
+├── script.js                    # Animações em Canvas e sistema i18n
+└── README.md                     # Documentação oficial e apresentação do repositório
 ```
 
 ---
