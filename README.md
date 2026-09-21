@@ -3,7 +3,7 @@
 ![Role: Full Stack Developer](https://img.shields.io/badge/Role-Full%20Stack%20Developer-00f2fe?style=for-the-badge)
 ![Education: IFSP Guarulhos](https://img.shields.io/badge/Education-IFSP%20Guarulhos-4caf50?style=for-the-badge)
 ![GU: GU3080838](https://img.shields.io/badge/GU-GU3080838-blue?style=for-the-badge)
-![Impeccable Engine: v2.0](https://img.shields.io/badge/Impeccable-v2.0%20(Release)-146CFF?style=for-the-badge)
+![Impeccable Engine: v2.0](https://img.shields.io/badge/Impeccable-v2.0-146CFF?style=for-the-badge)
 
 ---
 
