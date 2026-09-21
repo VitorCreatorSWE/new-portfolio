@@ -44,20 +44,27 @@
 </head>
 <body class="bg-dark-custom text-light">
 
+    <div class="noise-overlay" aria-hidden="true"></div>
+
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark-navbar fixed-top shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark-navbar fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand font-fira fw-bold text-primary-custom fs-3" href="index.html">&lt;Programador/&gt;</a>
-            <button class="navbar-toggler border-primary-custom text-primary-custom" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a class="navbar-brand font-fira fw-bold text-primary-custom" href="index.html#home" data-i18n="nav_brand">&lt;Programador/&gt;</a>
+            <button class="navbar-toggler border-primary-custom" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav align-items-center">
-                    <li class="nav-item"><a class="nav-link px-3" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="index.html#about">Sobre</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="catalogo-impeccable.html">Catálogo Impeccable</a></li>
-                    <li class="nav-item"><a class="nav-link px-3 active text-primary-custom fw-semibold" href="intervencoes-impeccable.html">Intervenções v2</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="index.html#contacts">Contatos</a></li>
+                <ul class="navbar-nav align-items-center gap-1">
+                    <li class="nav-item"><a class="nav-link px-3 nav-link-custom" href="index.html#home" data-i18n="nav_home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 nav-link-custom" href="index.html#about" data-i18n="nav_about">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 nav-link-custom" href="catalogo-impeccable.html" data-i18n="nav_catalogo">Catálogo Impeccable</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 nav-link-custom active" href="intervencoes-impeccable.html" data-i18n="nav_intervencoes">Intervenções v2</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 nav-link-custom" href="index.html#contacts" data-i18n="nav_contacts">Contatos</a></li>
+                    <li class="nav-item ms-lg-2 mt-3 mt-lg-0">
+                        <button id="langToggle" class="btn btn-outline-primary-custom btn-sm rounded-pill px-3 fw-bold" aria-label="Trocar idioma">
+                            <i class="bi bi-globe2 me-1"></i><span id="currentLang">EN</span>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -65,9 +72,9 @@
 
     <div class="container py-5 mt-5">
         <div class="text-center my-4">
-            <span class="badge bg-success-subtle text-success font-fira mb-2 px-3 py-2 border border-success rounded-pill">Transição v1 → v2 Concluída</span>
-            <h1 class="display-5 fw-bold font-poppins text-white">Registro de Intervenções Práticas</h1>
-            <p class="lead text-secondary-custom max-width-700 mx-auto">
+            <span class="badge bg-success-subtle text-success font-fira mb-2 px-3 py-2 border border-success rounded-pill" data-i18n="int_badge">Transição v1 → v2 Concluída</span>
+            <h1 class="display-5 fw-bold font-poppins text-white" data-i18n="int_title">Registro de Intervenções Práticas</h1>
+            <p class="lead text-secondary-custom max-width-700 mx-auto" data-i18n="int_desc">
                 Documentação sistemática de 16 intervenções práticas executadas com os comandos do <strong>Impeccable</strong> para transformar o portfólio inicial (v1) na versão otimizada (v2).
             </p>
         </div>
@@ -78,27 +85,27 @@
             <div class="log-card">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <span class="badge-cmd">1. /impeccable init</span>
-                    <span class="badge bg-secondary">Categoria: Sistematizar</span>
+                    <span class="badge bg-secondary" data-i18n="int_1_cat">Categoria: Sistematizar</span>
                 </div>
                 <div class="row g-3">
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Problema Observado</p>
-                        <p class="text-light small">A v1 não possuía documentação de produto ou regras formais de design, gerando risco de modificações inconsistentes.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_obs_problem">Problema Observado</p>
+                        <p class="text-light small" data-i18n="int_1_problem">A v1 não possuía documentação de produto ou regras formais de design, gerando risco de modificações inconsistentes.</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Hipótese de Melhoria</p>
-                        <p class="text-light small">Inicializar o Impeccable no repositório gerará os arquivos de governança para manter a integridade visual.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_imp_hypothesis">Hipótese de Melhoria</p>
+                        <p class="text-light small" data-i18n="int_1_hypothesis">Inicializar o Impeccable no repositório gerará os arquivos de governança para manter a integridade visual.</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Prompt / Orientação</p>
+                        <p class="field-label mb-1" data-i18n="lbl_prompt_guide">Prompt / Orientação</p>
                         <p class="text-secondary-custom small font-fira bg-dark p-2 rounded">"/impeccable init: Bootstrapping PRODUCT.md and DESIGN.md for Vitor's Portfolio"</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Resultado & Evidência</p>
-                        <p class="text-light small">Arquivos <code>PRODUCT.md</code> e <code>DESIGN.md</code> criados com especificação completa de tokens e anti-referências.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_result_evidence">Resultado & Evidência</p>
+                        <p class="text-light small" data-i18n="int_1_result">Arquivos <code>PRODUCT.md</code> e <code>DESIGN.md</code> criados com especificação completa de tokens e anti-referências.</p>
                     </div>
                     <div class="col-12 border-top border-secondary border-opacity-25 pt-2">
-                        <p class="small text-secondary-custom mb-0"><strong>Análise & Decisão:</strong> Decidido adotar o Brand Blue `#146CFF` e proibir o uso de gradientes roxos genéricos de IA.</p>
+                        <p class="small text-secondary-custom mb-0"><strong data-i18n="lbl_analysis_decision">Análise & Decisão:</strong> <span data-i18n="int_1_decision">Decidido adotar o Brand Blue `#146CFF` e proibir o uso de gradientes roxos genéricos de IA.</span></p>
                     </div>
                 </div>
             </div>
@@ -107,27 +114,27 @@
             <div class="log-card">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <span class="badge-cmd">2. /impeccable document</span>
-                    <span class="badge bg-secondary">Categoria: Sistematizar</span>
+                    <span class="badge bg-secondary" data-i18n="int_2_cat">Categoria: Sistematizar</span>
                 </div>
                 <div class="row g-3">
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Problema Observado</p>
-                        <p class="text-light small">Variáveis de tema escuro e fontes não estavam registradas formalmente na especificação do projeto.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_obs_problem">Problema Observado</p>
+                        <p class="text-light small" data-i18n="int_2_problem">Variáveis de tema escuro e fontes não estavam registradas formalmente na especificação do projeto.</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Hipótese de Melhoria</p>
-                        <p class="text-light small">Documentar a escala de cores e regras no <code>DESIGN.md</code> facilitará futuras expansões.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_imp_hypothesis">Hipótese de Melhoria</p>
+                        <p class="text-light small" data-i18n="int_2_hypothesis">Documentar a escala de cores e regras no <code>DESIGN.md</code> facilitará futuras expansões.</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Prompt / Orientação</p>
+                        <p class="field-label mb-1" data-i18n="lbl_prompt_guide">Prompt / Orientação</p>
                         <p class="text-secondary-custom small font-fira bg-dark p-2 rounded">"/impeccable document: Synchronize tokens with DESIGN.md color system"</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Resultado & Evidência</p>
-                        <p class="text-light small">Tabela de cores e tipografia (`Poppins` e `Fira Code`) catalogadas no <code>DESIGN.md</code>.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_result_evidence">Resultado & Evidência</p>
+                        <p class="text-light small" data-i18n="int_2_result">Tabela de cores e tipografia (`Poppins` e `Fira Code`) catalogadas no <code>DESIGN.md</code>.</p>
                     </div>
                     <div class="col-12 border-top border-secondary border-opacity-25 pt-2">
-                        <p class="small text-secondary-custom mb-0"><strong>Análise & Decisão:</strong> Mantido o uso exclusivo de Poppins para títulos/corpo e Fira Code para acentos de código.</p>
+                        <p class="small text-secondary-custom mb-0"><strong data-i18n="lbl_analysis_decision">Análise & Decisão:</strong> <span data-i18n="int_2_decision">Mantido o uso exclusivo de Poppins para títulos/corpo e Fira Code para acentos de código.</span></p>
                     </div>
                 </div>
             </div>
@@ -136,27 +143,27 @@
             <div class="log-card">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <span class="badge-cmd">3. /impeccable shape</span>
-                    <span class="badge bg-secondary">Categoria: Criar</span>
+                    <span class="badge bg-secondary" data-i18n="int_3_cat">Categoria: Criar</span>
                 </div>
                 <div class="row g-3">
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Problema Observado</p>
-                        <p class="text-light small">A seção "Sobre mim" na v1 consistia apenas em parágrafos de texto puro sem apelo visual de desenvolvedor.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_obs_problem">Problema Observado</p>
+                        <p class="text-light small" data-i18n="int_3_problem">A seção "Sobre mim" na v1 consistia apenas em parágrafos de texto puro sem apelo visual de desenvolvedor.</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Hipótese de Melhoria</p>
-                        <p class="text-light small">Reestruturar o módulo no formato de card de IDE de código aumentará a percepção de skill técnica.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_imp_hypothesis">Hipótese de Melhoria</p>
+                        <p class="text-light small" data-i18n="int_3_hypothesis">Reestruturar o módulo no formato de card de IDE de código aumentará a percepção de skill técnica.</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Prompt / Orientação</p>
+                        <p class="field-label mb-1" data-i18n="lbl_prompt_guide">Prompt / Orientação</p>
                         <p class="text-secondary-custom small font-fira bg-dark p-2 rounded">"/impeccable shape: Restructure About section into an IDE window layout"</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Resultado & Evidência</p>
-                        <p class="text-light small">Seção transformada em um card de IDE com barra de títulos, números de linha e estatísticas.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_result_evidence">Resultado & Evidência</p>
+                        <p class="text-light small" data-i18n="int_3_result">Seção transformada em um card de IDE com barra de títulos, números de linha e estatísticas.</p>
                     </div>
                     <div class="col-12 border-top border-secondary border-opacity-25 pt-2">
-                        <p class="small text-secondary-custom mb-0"><strong>Análise & Decisão:</strong> Aprovado. A estética de IDE reforça a identidade de Full Stack Developer.</p>
+                        <p class="small text-secondary-custom mb-0"><strong data-i18n="lbl_analysis_decision">Análise & Decisão:</strong> <span data-i18n="int_3_decision">Aprovado. A estética de IDE reforça a identidade de Full Stack Developer.</span></p>
                     </div>
                 </div>
             </div>
@@ -165,27 +172,27 @@
             <div class="log-card">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <span class="badge-cmd">4. /impeccable critique</span>
-                    <span class="badge bg-secondary">Categoria: Avaliar</span>
+                    <span class="badge bg-secondary" data-i18n="int_4_cat">Categoria: Avaliar</span>
                 </div>
                 <div class="row g-3">
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Problema Observado</p>
-                        <p class="text-light small">Os botões de contato no final da página v1 tinham bordas finas demais e pouca presença visual.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_obs_problem">Problema Observado</p>
+                        <p class="text-light small" data-i18n="int_4_problem">Os botões de contato no final da página v1 tinham bordas finas demais e pouca presença visual.</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Hipótese de Melhoria</p>
-                        <p class="text-light small">Uma crítica heurística indicará o aumento do peso visual do card de contatos para aumentar conversão.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_imp_hypothesis">Hipótese de Melhoria</p>
+                        <p class="text-light small" data-i18n="int_4_hypothesis">Uma crítica heurística indicará o aumento do peso visual do card de contatos para aumentar conversão.</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Prompt / Orientação</p>
+                        <p class="field-label mb-1" data-i18n="lbl_prompt_guide">Prompt / Orientação</p>
                         <p class="text-secondary-custom small font-fira bg-dark p-2 rounded">"/impeccable critique: Evaluate visual hierarchy and call-to-action cards"</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Resultado & Evidência</p>
-                        <p class="text-light small">Card de contatos redesenhado com destaque em vidro (backdrop-filter) e avatar central.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_result_evidence">Resultado & Evidência</p>
+                        <p class="text-light small" data-i18n="int_4_result">Card de contatos redesenhado com destaque em vidro (backdrop-filter) e avatar central.</p>
                     </div>
                     <div class="col-12 border-top border-secondary border-opacity-25 pt-2">
-                        <p class="small text-secondary-custom mb-0"><strong>Análise & Decisão:</strong> Aumento substancial na taxa de destaque visual dos botões de WhatsApp e GitHub.</p>
+                        <p class="small text-secondary-custom mb-0"><strong data-i18n="lbl_analysis_decision">Análise & Decisão:</strong> <span data-i18n="int_4_decision">Aumento substancial na taxa de destaque visual dos botões de WhatsApp e GitHub.</span></p>
                     </div>
                 </div>
             </div>
@@ -194,27 +201,27 @@
             <div class="log-card">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <span class="badge-cmd">5. /impeccable audit</span>
-                    <span class="badge bg-secondary">Categoria: Avaliar</span>
+                    <span class="badge bg-secondary" data-i18n="int_5_cat">Categoria: Avaliar</span>
                 </div>
                 <div class="row g-3">
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Problema Observado</p>
-                        <p class="text-light small">Haviam estilos CSS inline repetidos e sombras inconsistentes entre as seções na v1.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_obs_problem">Problema Observado</p>
+                        <p class="text-light small" data-i18n="int_5_problem">Haviam estilos CSS inline repetidos e sombras inconsistentes entre as seções na v1.</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Hipótese de Melhoria</p>
-                        <p class="text-light small">Uma auditoria do código eliminará duplicações e padronizará todas as classes CSS.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_imp_hypothesis">Hipótese de Melhoria</p>
+                        <p class="text-light small" data-i18n="int_5_hypothesis">Uma auditoria do código eliminará duplicações e padronizará todas as classes CSS.</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Prompt / Orientação</p>
+                        <p class="field-label mb-1" data-i18n="lbl_prompt_guide">Prompt / Orientação</p>
                         <p class="text-secondary-custom small font-fira bg-dark p-2 rounded">"/impeccable audit: Scan styles.css for inline styles and color discrepancies"</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Resultado & Evidência</p>
-                        <p class="text-light small">Estilos inline removidos e consolidados nas variáveis CSS do `:root`.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_result_evidence">Resultado & Evidência</p>
+                        <p class="text-light small" data-i18n="int_5_result">Estilos inline removidos e consolidados nas variáveis CSS do `:root`.</p>
                     </div>
                     <div class="col-12 border-top border-secondary border-opacity-25 pt-2">
-                        <p class="small text-secondary-custom mb-0"><strong>Análise & Decisão:</strong> Código CSS reduzido e 100% aderente às especificações do `DESIGN.md`.</p>
+                        <p class="small text-secondary-custom mb-0"><strong data-i18n="lbl_analysis_decision">Análise & Decisão:</strong> <span data-i18n="int_5_decision">Código CSS reduzido e 100% aderente às especificações do `DESIGN.md`.</span></p>
                     </div>
                 </div>
             </div>
@@ -223,27 +230,27 @@
             <div class="log-card">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <span class="badge-cmd">6. /impeccable typography</span>
-                    <span class="badge bg-secondary">Categoria: Refinar</span>
+                    <span class="badge bg-secondary" data-i18n="int_6_cat">Categoria: Refinar</span>
                 </div>
                 <div class="row g-3">
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Problema Observado</p>
-                        <p class="text-light small">O subtítulo da Hero section tinha font-size desproporcional e leitura cansativa.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_obs_problem">Problema Observado</p>
+                        <p class="text-light small" data-i18n="int_6_problem">O subtítulo da Hero section tinha font-size desproporcional e leitura cansativa.</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Hipótese de Melhoria</p>
-                        <p class="text-light small">Ajustar a escala tipográfica com `Poppins` weight 600 e line-height relaxado melhorará a leitura.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_imp_hypothesis">Hipótese de Melhoria</p>
+                        <p class="text-light small" data-i18n="int_6_hypothesis">Ajustar a escala tipográfica com `Poppins` weight 600 e line-height relaxado melhorará a leitura.</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Prompt / Orientação</p>
+                        <p class="field-label mb-1" data-i18n="lbl_prompt_guide">Prompt / Orientação</p>
                         <p class="text-secondary-custom small font-fira bg-dark p-2 rounded">"/impeccable typography: Calibrate Poppins heading hierarchy and line spacing"</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Resultado & Evidência</p>
-                        <p class="text-light small">Subtítulos ajustados para a classe `lead` com cor secundária `#94a3b8` para alto contraste.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_result_evidence">Resultado & Evidência</p>
+                        <p class="text-light small" data-i18n="int_6_result">Subtítulos ajustados para a classe `lead` com cor secundária `#94a3b8` para alto contraste.</p>
                     </div>
                     <div class="col-12 border-top border-secondary border-opacity-25 pt-2">
-                        <p class="small text-secondary-custom mb-0"><strong>Análise & Decisão:</strong> Leitura mais fluida sem competir com o nome "Vitor" no H1.</p>
+                        <p class="small text-secondary-custom mb-0"><strong data-i18n="lbl_analysis_decision">Análise & Decisão:</strong> <span data-i18n="int_6_decision">Leitura mais fluida sem competir com o nome "Vitor" no H1.</span></p>
                     </div>
                 </div>
             </div>
@@ -252,27 +259,27 @@
             <div class="log-card">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <span class="badge-cmd">7. /impeccable layout</span>
-                    <span class="badge bg-secondary">Categoria: Refinar</span>
+                    <span class="badge bg-secondary" data-i18n="int_7_cat">Categoria: Refinar</span>
                 </div>
                 <div class="row g-3">
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Problema Observado</p>
-                        <p class="text-light small">A imagem de perfil ficava deslocada do centro vertical em resoluções intermediárias.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_obs_problem">Problema Observado</p>
+                        <p class="text-light small" data-i18n="int_7_problem">A imagem de perfil ficava deslocada do centro vertical em resoluções intermediárias.</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Hipótese de Melhoria</p>
-                        <p class="text-light small">Aplicar alinhamento flexbox `align-items-center` e container com min-vh-100 estabilizará a altura.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_imp_hypothesis">Hipótese de Melhoria</p>
+                        <p class="text-light small" data-i18n="int_7_hypothesis">Aplicar alinhamento flexbox `align-items-center` e container com min-vh-100 estabilizará a altura.</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Prompt / Orientação</p>
+                        <p class="field-label mb-1" data-i18n="lbl_prompt_guide">Prompt / Orientação</p>
                         <p class="text-secondary-custom small font-fira bg-dark p-2 rounded">"/impeccable layout: Align hero profile image grid container vertically"</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Resultado & Evidência</p>
-                        <p class="text-light small">Alinhamento perfeito da foto de perfil com os textos de apresentação em qualquer tela.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_result_evidence">Resultado & Evidência</p>
+                        <p class="text-light small" data-i18n="int_7_result">Alinhamento perfeito da foto de perfil com os textos de apresentação em qualquer tela.</p>
                     </div>
                     <div class="col-12 border-top border-secondary border-opacity-25 pt-2">
-                        <p class="small text-secondary-custom mb-0"><strong>Análise & Decisão:</strong> Centralização perfeita alcançada na Hero section.</p>
+                        <p class="small text-secondary-custom mb-0"><strong data-i18n="lbl_analysis_decision">Análise & Decisão:</strong> <span data-i18n="int_7_decision">Centralização perfeita alcançada na Hero section.</span></p>
                     </div>
                 </div>
             </div>
@@ -281,27 +288,27 @@
             <div class="log-card">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <span class="badge-cmd">8. /impeccable color</span>
-                    <span class="badge bg-secondary">Categoria: Refinar</span>
+                    <span class="badge bg-secondary" data-i18n="int_8_cat">Categoria: Refinar</span>
                 </div>
                 <div class="row g-3">
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Problema Observado</p>
-                        <p class="text-light small">Vários tons de azul diferentes eram usados aleatoriamente no CSS da v1.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_obs_problem">Problema Observado</p>
+                        <p class="text-light small" data-i18n="int_8_problem">Vários tons de azul diferentes eram usados aleatoriamente no CSS da v1.</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Hipótese de Melhoria</p>
-                        <p class="text-light small">Unificar todos os acentos no tom elétrico `#146CFF` criará identidade de marca coesa.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_imp_hypothesis">Hipótese de Melhoria</p>
+                        <p class="text-light small" data-i18n="int_8_hypothesis">Unificar todos os acentos no tom elétrico `#146CFF` criará identidade de marca coesa.</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Prompt / Orientação</p>
+                        <p class="field-label mb-1" data-i18n="lbl_prompt_guide">Prompt / Orientação</p>
                         <p class="text-secondary-custom small font-fira bg-dark p-2 rounded">"/impeccable color: Replace arbitrary blue shades with primary #146CFF"</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Resultado & Evidência</p>
-                        <p class="text-light small">Paleta de cores unificada em 100% da interface com a cor oficial da marca.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_result_evidence">Resultado & Evidência</p>
+                        <p class="text-light small" data-i18n="int_8_result">Paleta de cores unificada em 100% da interface com a cor oficial da marca.</p>
                     </div>
                     <div class="col-12 border-top border-secondary border-opacity-25 pt-2">
-                        <p class="small text-secondary-custom mb-0"><strong>Análise & Decisão:</strong> Identidade visual fortaleceu instantaneamente.</p>
+                        <p class="small text-secondary-custom mb-0"><strong data-i18n="lbl_analysis_decision">Análise & Decisão:</strong> <span data-i18n="int_8_decision">Identidade visual fortaleceu instantaneamente.</span></p>
                     </div>
                 </div>
             </div>
@@ -310,27 +317,27 @@
             <div class="log-card">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <span class="badge-cmd">9. /impeccable responsiveness</span>
-                    <span class="badge bg-secondary">Categoria: Refinar</span>
+                    <span class="badge bg-secondary" data-i18n="int_9_cat">Categoria: Refinar</span>
                 </div>
                 <div class="row g-3">
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Problema Observado</p>
-                        <p class="text-light small">Em smartphones pequenos, a foto de perfil ocupava a tela inteira antes do texto.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_obs_problem">Problema Observado</p>
+                        <p class="text-light small" data-i18n="int_9_problem">Em smartphones pequenos, a foto de perfil ocupava a tela inteira antes do texto.</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Hipótese de Melhoria</p>
-                        <p class="text-light small">Usar `flex-column-reverse` no mobile priorizará a leitura do nome e cargo do desenvolvedor.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_imp_hypothesis">Hipótese de Melhoria</p>
+                        <p class="text-light small" data-i18n="int_9_hypothesis">Usar `flex-column-reverse` no mobile priorizará a leitura do nome e cargo do desenvolvedor.</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Prompt / Orientação</p>
+                        <p class="field-label mb-1" data-i18n="lbl_prompt_guide">Prompt / Orientação</p>
                         <p class="text-secondary-custom small font-fira bg-dark p-2 rounded">"/impeccable responsiveness: Optimize hero section column ordering for mobile"</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Resultado & Evidência</p>
-                        <p class="text-light small">No mobile o texto aparece primeiro e a foto fica ajustada abaixo, sem rolagem quebrada.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_result_evidence">Resultado & Evidência</p>
+                        <p class="text-light small" data-i18n="int_9_result">No mobile o texto aparece primeiro e a foto fica ajustada abaixo, sem rolagem quebrada.</p>
                     </div>
                     <div class="col-12 border-top border-secondary border-opacity-25 pt-2">
-                        <p class="small text-secondary-custom mb-0"><strong>Análise & Decisão:</strong> Experiência mobile extremamente aprimorada para recrutadores.</p>
+                        <p class="small text-secondary-custom mb-0"><strong data-i18n="lbl_analysis_decision">Análise & Decisão:</strong> <span data-i18n="int_9_decision">Experiência mobile extremamente aprimorada para recrutadores.</span></p>
                     </div>
                 </div>
             </div>
@@ -339,27 +346,27 @@
             <div class="log-card">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <span class="badge-cmd">10. /impeccable dark-mode</span>
-                    <span class="badge bg-secondary">Categoria: Refinar</span>
+                    <span class="badge bg-secondary" data-i18n="int_10_cat">Categoria: Refinar</span>
                 </div>
                 <div class="row g-3">
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Problema Observado</p>
-                        <p class="text-light small">O fundo preto absoluto `#000000` criava um contraste muito duro com o azul brilhante.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_obs_problem">Problema Observado</p>
+                        <p class="text-light small" data-i18n="int_10_problem">O fundo preto absoluto `#000000` criava um contraste muito duro com o azul brilhante.</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Hipótese de Melhoria</p>
-                        <p class="text-light small">Mudar o fundo para a tonalidade `#090a0f` trará elegância visual sem cansar a visão.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_imp_hypothesis">Hipótese de Melhoria</p>
+                        <p class="text-light small" data-i18n="int_10_hypothesis">Mudar o fundo para a tonalidade `#090a0f` trará elegância visual sem cansar a visão.</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Prompt / Orientação</p>
+                        <p class="field-label mb-1" data-i18n="lbl_prompt_guide">Prompt / Orientação</p>
                         <p class="text-secondary-custom small font-fira bg-dark p-2 rounded">"/impeccable dark-mode: Tune space-dark background colors #090a0f and #11131c"</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Resultado & Evidência</p>
-                        <p class="text-light small">Fundo alterado para `#090a0f` com seções alternadas em `#11131c` e brilhos em radial gradient.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_result_evidence">Resultado & Evidência</p>
+                        <p class="text-light small" data-i18n="int_10_result">Fundo alterado para `#090a0f` com seções alternadas em `#11131c` e brilhos em radial gradient.</p>
                     </div>
                     <div class="col-12 border-top border-secondary border-opacity-25 pt-2">
-                        <p class="small text-secondary-custom mb-0"><strong>Análise & Decisão:</strong> Aspecto de produto SaaS moderno e confortável aos olhos.</p>
+                        <p class="small text-secondary-custom mb-0"><strong data-i18n="lbl_analysis_decision">Análise & Decisão:</strong> <span data-i18n="int_10_decision">Aspecto de produto SaaS moderno e confortável aos olhos.</span></p>
                     </div>
                 </div>
             </div>
@@ -368,27 +375,27 @@
             <div class="log-card">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <span class="badge-cmd">11. /impeccable states</span>
-                    <span class="badge bg-secondary">Categoria: Refinar</span>
+                    <span class="badge bg-secondary" data-i18n="int_11_cat">Categoria: Refinar</span>
                 </div>
                 <div class="row g-3">
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Problema Observado</p>
-                        <p class="text-light small">Os ícones da stack tecnológica e botões não tinham feedback visual dinâmico ao passar o mouse.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_obs_problem">Problema Observado</p>
+                        <p class="text-light small" data-i18n="int_11_problem">Os ícones da stack tecnológica e botões não tinham feedback visual dinâmico ao passar o mouse.</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Hipótese de Melhoria</p>
-                        <p class="text-light small">Adicionar efeito de elevação (`translateY`) e brilho drop-shadow trará sensação tátil à interface.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_imp_hypothesis">Hipótese de Melhoria</p>
+                        <p class="text-light small" data-i18n="int_11_hypothesis">Adicionar efeito de elevação (`translateY`) e brilho drop-shadow trará sensação tátil à interface.</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Prompt / Orientação</p>
+                        <p class="field-label mb-1" data-i18n="lbl_prompt_guide">Prompt / Orientação</p>
                         <p class="text-secondary-custom small font-fira bg-dark p-2 rounded">"/impeccable states: Add hover elevation, glow, and spring transitions to tech tiles"</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Resultado & Evidência</p>
-                        <p class="text-light small">Cards e ícones agora elevam suavemente com brilho azul vibrante no hover.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_result_evidence">Resultado & Evidência</p>
+                        <p class="text-light small" data-i18n="int_11_result">Cards e ícones agora elevam suavemente com brilho azul vibrante no hover.</p>
                     </div>
                     <div class="col-12 border-top border-secondary border-opacity-25 pt-2">
-                        <p class="small text-secondary-custom mb-0"><strong>Análise & Decisão:</strong> Feedback instantâneo melhora a experiência de navegação.</p>
+                        <p class="small text-secondary-custom mb-0"><strong data-i18n="lbl_analysis_decision">Análise & Decisão:</strong> <span data-i18n="int_11_decision">Feedback instantâneo melhora a experiência de navegação.</span></p>
                     </div>
                 </div>
             </div>
@@ -397,27 +404,27 @@
             <div class="log-card">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <span class="badge-cmd">12. /impeccable simplify</span>
-                    <span class="badge bg-secondary">Categoria: Simplificar</span>
+                    <span class="badge bg-secondary" data-i18n="int_12_cat">Categoria: Simplificar</span>
                 </div>
                 <div class="row g-3">
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Problema Observado</p>
-                        <p class="text-light small">A navbar tinha muitas opções repetidas e bordas carregadas que distraíam o usuário.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_obs_problem">Problema Observado</p>
+                        <p class="text-light small" data-i18n="int_12_problem">A navbar tinha muitas opções repetidas e bordas carregadas que distraíam o usuário.</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Hipótese de Melhoria</p>
-                        <p class="text-light small">Simplificar o menu com efeito de vidro fosco (`backdrop-filter`) e links diretos.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_imp_hypothesis">Hipótese de Melhoria</p>
+                        <p class="text-light small" data-i18n="int_12_hypothesis">Simplificar o menu com efeito de vidro fosco (`backdrop-filter`) e links diretos.</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Prompt / Orientação</p>
+                        <p class="field-label mb-1" data-i18n="lbl_prompt_guide">Prompt / Orientação</p>
                         <p class="text-secondary-custom small font-fira bg-dark p-2 rounded">"/impeccable simplify: Clean navbar borders and apply subtle backdrop blur"</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Resultado & Evidência</p>
-                        <p class="text-light small">Navbar limpa, elegante e flutuante no topo da página.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_result_evidence">Resultado & Evidência</p>
+                        <p class="text-light small" data-i18n="int_12_result">Navbar limpa, elegante e flutuante no topo da página.</p>
                     </div>
                     <div class="col-12 border-top border-secondary border-opacity-25 pt-2">
-                        <p class="small text-secondary-custom mb-0"><strong>Análise & Decisão:</strong> Foco total mantido no conteúdo sem poluição visual.</p>
+                        <p class="small text-secondary-custom mb-0"><strong data-i18n="lbl_analysis_decision">Análise & Decisão:</strong> <span data-i18n="int_12_decision">Foco total mantido no conteúdo sem poluição visual.</span></p>
                     </div>
                 </div>
             </div>
@@ -426,27 +433,27 @@
             <div class="log-card">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <span class="badge-cmd">13. /impeccable a11y</span>
-                    <span class="badge bg-secondary">Categoria: Preparar</span>
+                    <span class="badge bg-secondary" data-i18n="int_13_cat">Categoria: Preparar</span>
                 </div>
                 <div class="row g-3">
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Problema Observado</p>
-                        <p class="text-light small">Imagens de tecnologia e botoes sem legenda causavam alertas em testes de acessibilidade.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_obs_problem">Problema Observado</p>
+                        <p class="text-light small" data-i18n="int_13_problem">Imagens de tecnologia e botoes sem legenda causavam alertas em testes de acessibilidade.</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Hipótese de Melhoria</p>
-                        <p class="text-light small">Inserir atributos `alt` semânticos e suporte completo a foco visual por teclado.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_imp_hypothesis">Hipótese de Melhoria</p>
+                        <p class="text-light small" data-i18n="int_13_hypothesis">Inserir atributos `alt` semânticos e suporte completo a foco visual por teclado.</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Prompt / Orientação</p>
+                        <p class="field-label mb-1" data-i18n="lbl_prompt_guide">Prompt / Orientação</p>
                         <p class="text-secondary-custom small font-fira bg-dark p-2 rounded">"/impeccable a11y: Audit alt tags and ensure focus outline compliance"</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Resultado & Evidência</p>
-                        <p class="text-light small">Todas as imagens possuem atributos `alt` descritivos e navegabilidade via tecla Tab ok.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_result_evidence">Resultado & Evidência</p>
+                        <p class="text-light small" data-i18n="int_13_result">Todas as imagens possuem atributos `alt` descritivos e navegabilidade via tecla Tab ok.</p>
                     </div>
                     <div class="col-12 border-top border-secondary border-opacity-25 pt-2">
-                        <p class="small text-secondary-custom mb-0"><strong>Análise & Decisão:</strong> Aprovado em conformidade com as diretrizes WCAG AA.</p>
+                        <p class="small text-secondary-custom mb-0"><strong data-i18n="lbl_analysis_decision">Análise & Decisão:</strong> <span data-i18n="int_13_decision">Aprovado em conformidade com as diretrizes WCAG AA.</span></p>
                     </div>
                 </div>
             </div>
@@ -455,27 +462,27 @@
             <div class="log-card">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <span class="badge-cmd">14. /impeccable i18n</span>
-                    <span class="badge bg-secondary">Categoria: Preparar</span>
+                    <span class="badge bg-secondary" data-i18n="int_14_cat">Categoria: Preparar</span>
                 </div>
                 <div class="row g-3">
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Problema Observado</p>
-                        <p class="text-light small">Recrutadores internacionais não conseguiam ler o portfólio em inglês na v1.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_obs_problem">Problema Observado</p>
+                        <p class="text-light small" data-i18n="int_14_problem">Recrutadores internacionais não conseguiam ler o portfólio em inglês na v1.</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Hipótese de Melhoria</p>
-                        <p class="text-light small">Implementar chaveador dinâmico de idioma PT/EN sem recarregar a página.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_imp_hypothesis">Hipótese de Melhoria</p>
+                        <p class="text-light small" data-i18n="int_14_hypothesis">Implementar chaveador dinâmico de idioma PT/EN sem recarregar a página.</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Prompt / Orientação</p>
+                        <p class="field-label mb-1" data-i18n="lbl_prompt_guide">Prompt / Orientação</p>
                         <p class="text-secondary-custom small font-fira bg-dark p-2 rounded">"/impeccable i18n: Structure translations dictionary for smooth language toggle"</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Resultado & Evidência</p>
-                        <p class="text-light small">Botão de alternância no header que traduz instantaneamente 100% da interface.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_result_evidence">Resultado & Evidência</p>
+                        <p class="text-light small" data-i18n="int_14_result">Botão de alternância no header que traduz instantaneamente 100% da interface.</p>
                     </div>
                     <div class="col-12 border-top border-secondary border-opacity-25 pt-2">
-                        <p class="small text-secondary-custom mb-0"><strong>Análise & Decisão:</strong> Recurso altamente elogiado por expandir o alcance do portfólio.</p>
+                        <p class="small text-secondary-custom mb-0"><strong data-i18n="lbl_analysis_decision">Análise & Decisão:</strong> <span data-i18n="int_14_decision">Recurso altamente elogiado por expandir o alcance do portfólio.</span></p>
                     </div>
                 </div>
             </div>
@@ -484,27 +491,27 @@
             <div class="log-card">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <span class="badge-cmd">15. /impeccable polish</span>
-                    <span class="badge bg-secondary">Categoria: Refinar</span>
+                    <span class="badge bg-secondary" data-i18n="int_15_cat">Categoria: Refinar</span>
                 </div>
                 <div class="row g-3">
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Problema Observado</p>
-                        <p class="text-light small">O fundo da página parecia estático e sem a energia tecnológica característica do perfil.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_obs_problem">Problema Observado</p>
+                        <p class="text-light small" data-i18n="int_15_problem">O fundo da página parecia estático e sem a energia tecnológica característica do perfil.</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Hipótese de Melhoria</p>
-                        <p class="text-light small">Adicionar um Canvas interativo com efeito Matrix em azul sutil (opacity 0.25).</p>
+                        <p class="field-label mb-1" data-i18n="lbl_imp_hypothesis">Hipótese de Melhoria</p>
+                        <p class="text-light small" data-i18n="int_15_hypothesis">Adicionar um Canvas interativo com efeito Matrix em azul sutil (opacity 0.25).</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Prompt / Orientação</p>
+                        <p class="field-label mb-1" data-i18n="lbl_prompt_guide">Prompt / Orientação</p>
                         <p class="text-secondary-custom small font-fira bg-dark p-2 rounded">"/impeccable polish: Add ambient background Matrix rain canvas animation"</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Resultado & Evidência</p>
-                        <p class="text-light small">Efeito Matrix fluido e elegante rodando ao fundo sem atrapalhar a leitura do texto.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_result_evidence">Resultado & Evidência</p>
+                        <p class="text-light small" data-i18n="int_15_result">Efeito Matrix fluido e elegante rodando ao fundo sem atrapalhar a leitura do texto.</p>
                     </div>
                     <div class="col-12 border-top border-secondary border-opacity-25 pt-2">
-                        <p class="small text-secondary-custom mb-0"><strong>Análise & Decisão:</strong> Polimento final aprovado. Torna o portfólio memorável.</p>
+                        <p class="small text-secondary-custom mb-0"><strong data-i18n="lbl_analysis_decision">Análise & Decisão:</strong> <span data-i18n="int_15_decision">Polimento final aprovado. Torna o portfólio memorável.</span></p>
                     </div>
                 </div>
             </div>
@@ -513,27 +520,27 @@
             <div class="log-card">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <span class="badge-cmd">16. /impeccable live</span>
-                    <span class="badge bg-secondary">Categoria: Avaliar</span>
+                    <span class="badge bg-secondary" data-i18n="int_16_cat">Categoria: Avaliar</span>
                 </div>
                 <div class="row g-3">
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Problema Observado</p>
-                        <p class="text-light small">Necessidade de homologar se todas as interações e Canvas funcionam sem bugs no navegador real.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_obs_problem">Problema Observado</p>
+                        <p class="text-light small" data-i18n="int_16_problem">Necessidade de homologar se todas as interações e Canvas funcionam sem bugs no navegador real.</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Hipótese de Melhoria</p>
-                        <p class="text-light small">Execução em runtime no browser validará a versão v2 final.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_imp_hypothesis">Hipótese de Melhoria</p>
+                        <p class="text-light small" data-i18n="int_16_hypothesis">Execução em runtime no browser validará a versão v2 final.</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Prompt / Orientação</p>
+                        <p class="field-label mb-1" data-i18n="lbl_prompt_guide">Prompt / Orientação</p>
                         <p class="text-secondary-custom small font-fira bg-dark p-2 rounded">"/impeccable live: Validate runtime canvas performance and links in Chrome/Firefox"</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="field-label mb-1">Resultado & Evidência</p>
-                        <p class="text-light small">Zero erros no console JS, 60fps constante no Canvas e links 100% operacionais.</p>
+                        <p class="field-label mb-1" data-i18n="lbl_result_evidence">Resultado & Evidência</p>
+                        <p class="text-light small" data-i18n="int_16_result">Zero erros no console JS, 60fps constante no Canvas e links 100% operacionais.</p>
                     </div>
                     <div class="col-12 border-top border-secondary border-opacity-25 pt-2">
-                        <p class="small text-secondary-custom mb-0"><strong>Análise & Decisão:</strong> Projeto aprovado para publicação da versão v2 oficial.</p>
+                        <p class="small text-secondary-custom mb-0"><strong data-i18n="lbl_analysis_decision">Análise & Decisão:</strong> <span data-i18n="int_16_decision">Projeto aprovado para publicação da versão v2 oficial.</span></p>
                     </div>
                 </div>
             </div>
@@ -543,12 +550,13 @@
 
     <footer class="py-4 text-center bg-dark-navbar text-secondary-custom font-fira border-top border-secondary border-opacity-25 mt-5">
         <div class="container">
-            <p class="mb-0">© 2026 Vitor Igor dos Santos. Registro de Intervenções Impeccable (v1 → v2).</p>
-            <p class="mb-0 mt-1 small opacity-75"><a href="index.html" class="text-primary-custom">Voltar ao Portfólio Main (v2)</a></p>
+            <p class="mb-0" data-i18n="int_footer">© 2026 Vitor Igor dos Santos. Registro de Intervenções Impeccable (v1 → v2).</p>
+            <p class="mb-0 mt-1 small opacity-75"><a href="index.html" class="text-primary-custom" data-i18n="back_to_main">Voltar ao Portfólio Main (v2)</a></p>
         </div>
     </footer>
 
     <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
